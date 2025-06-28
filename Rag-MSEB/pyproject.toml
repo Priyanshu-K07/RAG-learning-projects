@@ -1,0 +1,28 @@
+[project]
+name = "rag-mseb"
+version = "0.1.0"
+description = ""
+authors = [
+    { name = "Priyanshu-K07", email = "priyanshukapadnis07@gmail.com" }
+]
+requires-python = ">=3.12,<4.0"
+
+dependencies = [
+    "langchain",                        # Pin base version
+    "langchain-community",              # Let Poetry choose compatible versions
+    "langchain-core",
+    "langchain-google-genai",
+    "langchain-huggingface",
+    "python-dotenv",
+    "PyMuPDF",                          # For PDF loading
+    "sentence-transformers",           # If using SentenceTransformer directly
+    "protobuf==3.19.6",
+    "langchain-chroma (>=0.2.4,<0.3.0)"
+]
+
+[tool.poetry]
+package-mode = false
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

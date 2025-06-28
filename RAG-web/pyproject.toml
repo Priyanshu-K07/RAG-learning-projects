@@ -1,0 +1,30 @@
+[project]
+name = "rag-web"
+version = "0.1.0"
+description = ""
+authors = [
+    { name = "Priyanshu-K07", email = "priyanshukapadnis07@gmail.com" }
+]
+requires-python = ">=3.12,<4.0"
+
+dependencies = [
+    "langchain",                 # Pin base version
+    "langchain-community",              # Let Poetry choose compatible versions
+    "langchain-core",
+    "langchain-google-genai",
+    "langchain-huggingface",
+    "chromadb",
+    "python-dotenv",
+    "bs4",
+    "tiktoken (>=0.9.0,<0.10.0)",
+    "sentence-transformers (>=4.1.0,<5.0.0)",
+    "protobuf (==3.19.6)",
+    "gitpython (>=3.1.44,<4.0.0)"
+]
+
+[tool.poetry]
+package-mode = false
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
